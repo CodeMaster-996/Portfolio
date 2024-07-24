@@ -90,9 +90,9 @@
 :root{
     --Light-Blue:#6CCFF6;
     --Dark-Teal:#001011;
-    --Gray:#757780;
-    --off-white:#FFFFFC;
-    --Accents:#98CE00;
+    --Gray:#333641;
+    --off-white:#e6eceb;
+    --Accents:#ff0037;
 }
 
 html,body{
@@ -111,13 +111,13 @@ html,body{
     position: relative;
     height: 100%;
     width: 100%;
-    background-color: #98CE00;
+    background-color: var(--Accents);
     overflow: hidden;
 }
 .list{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,11 +129,31 @@ html,body{
     transition: 0.3s ease-in-out;
     transform-style: preserve-3d;
     transform: perspective(1000px);
+    animation-name: un-hide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes un-hide{
+    0%{
+        filter: brightness(0);
+    }
+    20%{
+        filter: brightness(0.1);
+    }
+    90%{
+        filter: brightness(1);
+    }
+    98%{
+        filter: brightness(0.5);
+    }
+    100%{
+        filter: brightness(0);
+    }
 }
 
 .size{
     overflow: hidden;
-    width: 100px;
+    width: 7vw;
     height: 150px;
     border-radius: 20px;
     position: relative;
@@ -257,6 +277,7 @@ html,body{
 }
 
 .cir1{
+    opacity: 0.8;
     position: absolute;
     height: 50vh;
     width: 50vh;
@@ -405,7 +426,7 @@ html,body{
 
 .name1{
     position: absolute;
-    transform: translateY(-12vh);
+    transform: translateY(8.8vh);
     text-align: center;
     transition: 0.4s ease-in-out;
 }
@@ -413,45 +434,60 @@ html,body{
 .name2{
     position: absolute;
     text-align: center;
-    transform: translateX(-260px)
-    translateY(40%);
+    transform: translateX(0)
+    translateY(8.8vh);
     transition: 0.4s ease-in-out;
 }
 
-.name3,.name4,.name10{
+.name3,.name4{
     position: absolute;
     text-align: center;
+    font-size: 1rem;
     transform: translateX(0vh)
-    translateY(190px);
+    translateY(8.5vh);
     transition: 0.4s ease-in-out;
 }
-
-.name4{
+.name10{
     position: absolute;
     text-align: center;
     transform: translateX(0vh)
-    translateY(190px);
+    translateY(8.8vh);
     transition: 0.4s ease-in-out;
 }
-
-.name5,.name7,.name8{
+.name5{
     position: absolute;
     text-align: center;
     transform: translateX(0vh)
-    translateY(-90px);
+    translateY(15vh);
+    font-size: 1rem;
+    transition: 0.5s ease-in-out;
+}
+
+.name7,.name8{
+    position: absolute;
+    text-align: center;
+    transform: translateX(0vh)
+    translateY(8.8vh);
+    font-size: 1rem;
     transition: 0.5s ease-in-out;
 }
 .name6{
     position: absolute;
     text-align: center;
+    font-size: 1rem;
     transform: translateX(0vh)
-    translateY(270px);
+    translateY(15vh);
     transition: 0.5s ease-in-out;
 }
 .name9{
     position: absolute;
     text-align: center;
-    transform: translateX(260px)
-    translateY(40%);
+    transform: translateX(0)
+    translateY(8.8vh);
     transition: 0.5s ease-in-out;
+}
+
+.contact{
+    width: 100%;
+    height: 30%;
 }
