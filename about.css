@@ -1,0 +1,114 @@
+@font-face {
+    font-family: one;
+    src: url(./font/one.ttf);
+}
+@font-face {
+    font-family: two;
+    src: url(./font/two.otf);
+}
+@font-face {
+    font-family: three;
+    src: url(./font/three.ttf);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--Accents);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--Dark-Teal);
+    width: 50px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Light-Blue:#6CCFF6;
+    --Dark-Teal:#001011;
+    --Gray:#333641;
+    --off-white:#e6eceb;
+    --Accents:#ff0037;
+}
+
+body{
+    background-color: var(--Dark-Teal);
+    color: var(--off-white);
+    font-family: three;
+    position: relative;
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 12%;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 100vh;
+    width: auto;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.area{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.WHM{
+    height: auto;
+}
+
+.h1{
+    color: var(--Accents);
+    width:fit-content;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 10px;
+    text-shadow: 0 0 20px var(--Accents);
+}
+
+.datadiv{
+    border-left: 2px solid var(--Accents);
+    position: relative;
+    display: flex;
+}
+
+.data{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 2%;
+}
+
+.bar{
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: var(--Accents);
+    box-shadow: 0 0 10px var(--Accents);
+}
+
+.mainpage{
+    position: absolute;
+    background-color: var(--Accents);
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 70px;
+}
+
+.mainpage a{
+    text-decoration: none;
+    color: var(--off-white);
+    font-weight: 900;
+}
