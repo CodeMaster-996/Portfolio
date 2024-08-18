@@ -1,14 +1,7 @@
-@font-face {
-    font-family: one;
-    src: url(/font/one.ttf);
-}
-@font-face {
-    font-family: two;
-    src: url(/font/two.otf);
-}
+
 @font-face {
     font-family: three;
-    src: url(/font/three.ttf);
+    src: url(./three.ttf);
 }
 
 :root{
